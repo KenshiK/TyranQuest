@@ -59,7 +59,6 @@ MonoBehaviour:
     - "C'est horrible ! Un nid d'aliens se trouve juste en dessous du camp ! Ils risquent
       d'\xE9clorent dans tr\xE8s peu de temps !"
     - Nous devons nous empresser d'agir !
-    - "Bien entendu Monsieur. Nous allons proc\xE9der."
   choices:
   - text: Etudier les oeufs
     physicalEffect: -5

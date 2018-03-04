@@ -60,7 +60,6 @@ MonoBehaviour:
       batteries."
     - "Il dit se souvenir d'une manoeuvre qui pourrait permettre de nous \xE9chapper
       de ce lieu ! Acceptez-vous sa demande ?"
-    - Compris Monsieur.
   choices:
   - text: Accepter
     physicalEffect: 0

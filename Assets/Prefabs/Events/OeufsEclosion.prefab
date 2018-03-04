@@ -60,7 +60,6 @@ MonoBehaviour:
     - "Les monstres qui en sont sortis saccagent notre mat\xE9riel et blessent certains
       d'entre nous !"
     - Que devons-nous faire ?
-    - "Tr\xE8s bien Monsieur"
   choices:
   - text: Domestiquons les monstres !
     physicalEffect: 0

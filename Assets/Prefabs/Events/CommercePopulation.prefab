@@ -60,7 +60,6 @@ MonoBehaviour:
       de valeurs repr\xE9sentant nos cultures respectives."
     - "Il sont pr\xEAt \xE0 nous offrir de magnifique cristaux \xE9carlates."
     - Devrions-nous accepter ?
-    - Bien Monsieur.
   choices:
   - text: Echanger des ressources du vaisseau
     physicalEffect: -3

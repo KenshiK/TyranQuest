@@ -58,7 +58,6 @@ MonoBehaviour:
     - "Un ouragan a ravag\xE9 une partie du camp ! Il faut le reconstruire !"
     - "Peut-\xEAtre voulez-vosu que nous nous concentrions sur autre chose \xE0 la
       place ? Que faire ?"
-    - Bien compris Monsieur.
   choices:
   - text: "Reconstruire la partie d\xE9truite"
     physicalEffect: -3

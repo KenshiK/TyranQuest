@@ -61,7 +61,6 @@ MonoBehaviour:
     - "Elle promet que nous aurons bient\xF4t des r\xE9sultats, mais cela fait des
       jours que l'on attend."
     - Cela ne peut plus durer. Faites quelque chose !
-    - Bien Monsieur.
   choices:
   - text: Intervenir
     physicalEffect: -1
