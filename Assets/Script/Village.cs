@@ -234,7 +234,10 @@ public class Village : MonoBehaviour
     public void ChooseEvent()
     {
         currentEvent = null;
-
+        if(daysSurvived == 0)
+        {
+            currentEvent = possibleEvents[0];
+        }
         // Applique les effets du childEvent du choix
         if (currentChoice != null)
         {
@@ -389,7 +392,12 @@ public class Village : MonoBehaviour
                 resultSentences[l] = sb_list.Dequeue().ToString();
             }
         }
+        if (resultSentences != null)
+        {
+            dialogueManager.StartDialogue(new Dialogue(resultSentences));
+        }
 
+        /*
         if (possibleSecondaryEvents.Length > 0)
         {
             GameObject secondEvent = RandomEvent(possibleSecondaryEvents);
@@ -399,7 +407,7 @@ public class Village : MonoBehaviour
                 dialogueManager.StartDialogue(new Dialogue(resultSentences));
                 /*
                  * REFACT
-                 */
+                 *
                 //textWindowManager.GetInstance().AddToDico(1, resultSentences);
             }
 
@@ -407,7 +415,7 @@ public class Village : MonoBehaviour
             //Choice c = secondEvent.GetComponent<Event>().choices[0];
 
             secondEvent.GetComponent<Event>().ApplyChoice();
-        }
+        }*/
         /*
         survivorManager.EffectOnSurvivors(c.PhysicalEffect, c.MentalEffect, c.WholeVillage);
         ChangePopulation(c.PopulationEffect);

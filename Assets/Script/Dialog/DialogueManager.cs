@@ -121,11 +121,14 @@ public class DialogueManager : MonoBehaviour {
             EndDialogue();
             return;
         }
-
+        
         if (!isRunning)
         {
             string sentence = sentences.Dequeue();
-            StartCoroutine(TypeSentence(sentence));
+            if (sentence != null && sentence != "")
+            {
+                StartCoroutine(TypeSentence(sentence));
+            }
         }
     }
 

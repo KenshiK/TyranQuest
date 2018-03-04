@@ -46,8 +46,8 @@ public class Event : MonoBehaviour {
     {
         Choice c;
         Village village = Village.GetInstance();
-        if (choices.Length > 1)
-        {
+        //if (choices.Length > 1)
+        //{
             float rnd = Random.Range(0, 1);
             if (deviantChoices.Length > 0 && rnd < luck && deviantChoices.Length >= num + 1)
                 c = deviantChoices[num];
@@ -68,7 +68,7 @@ public class Event : MonoBehaviour {
 
             village.dialogueManager.eventHUD.SetActive(false);
 
-        }
+        /*}
         else
         {
             SurvivorManager survivorManager = SurvivorManager.GetInstance();
@@ -83,7 +83,7 @@ public class Event : MonoBehaviour {
             Currentbutton.GetComponentInChildren<Text>().text = this.choices[0].text;
             Currentbutton.GetComponent<Button>().onClick.RemoveAllListeners();
             Currentbutton.GetComponent<Button>().onClick.AddListener(delegate { this.GetComponent<Event>().ApplyChoice(0); });
-        }
+        }*/
     }
     
 }
