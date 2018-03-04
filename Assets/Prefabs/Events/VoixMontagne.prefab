@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1545041755460774}
+  m_RootGameObject: {fileID: 1508815744904578}
   m_IsPrefabParent: 1
---- !u!1 &1545041755460774
+--- !u!1 &1508815744904578
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4009711735630638}
-  - component: {fileID: 114651531670467724}
+  - component: {fileID: 4988659312949102}
+  - component: {fileID: 114881024430906474}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: VoixMontagne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4009711735630638
+--- !u!4 &4988659312949102
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545041755460774}
+  m_GameObject: {fileID: 1508815744904578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,79 +40,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114651531670467724
+--- !u!114 &114881024430906474
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545041755460774}
+  m_GameObject: {fileID: 1508815744904578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: Vous trouvez un vaisseau dans une caverne.
   dialogue:
-    name: Commandant Moutarde
+    name: "Vous-m\xEAme"
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - "A votre arriv\xE9, vous apercevez une caverne. En rentrant \xE0 l'int\xE9rieur,
+      vous entendez \xE0 nouveau le bruit."
+    - "Vous trouvez au fond de la grotte un vaisseau en ruine avec une unit\xE9 centrale.
+      C'est de cet endroit que sort le bruit."
+    - "Le buit est en r\xE9alit\xE9 un message cod\xE9. Vous ramassez le mat\xE9riel
+      abandonn\xE9 et r\xE9fl\xE9chissez au cas du message."
+    - Que faire ?
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
+  - text: "Arr\xEAter la transmission"
+    physicalEffect: 0
+    mentalEffect: 3
+    populationEffect: 0
+    WholeVillage: 0
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 0}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 0
+  - text: Partir
+    physicalEffect: 0
+    mentalEffect: -2
+    populationEffect: 0
+    WholeVillage: 0
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 0}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 0
+  - text: "D\xE9coder le message"
+    physicalEffect: 0
     mentalEffect: 0
     populationEffect: 0
     WholeVillage: 0
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
+      MentalHealthUpperThreshold: 99
+      MentalHealthLowerThreshold: 50
       PhysicalHealthUpperThreshold: 0
       PhysicalHealthLowerThreshold: 0
     childEvent:
-      childObject: {fileID: 0}
+      childObject: {fileID: 1414683350084280, guid: 039b5bd6df0953b419640d56eba3c9b8,
+        type: 2}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
-  - text: J'ai soif
-    physicalEffect: 0
-    mentalEffect: -10
-    populationEffect: 0
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
-    populationEffect: -1
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
+      childHappenNext: 1
   deviantChoices: []
   luck: 0.25
   weight: 5
-  baseWeight: 5
+  baseWeight: 0
   happenOnce: 0
   eventConditions:
     AuthorityUpperThreshold: 0

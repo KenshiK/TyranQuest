@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1545041755460774}
+  m_RootGameObject: {fileID: 1106435766305948}
   m_IsPrefabParent: 1
---- !u!1 &1545041755460774
+--- !u!1 &1106435766305948
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4009711735630638}
-  - component: {fileID: 114651531670467724}
+  - component: {fileID: 4480072532439346}
+  - component: {fileID: 114578966555063296}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: Bruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4009711735630638
+--- !u!4 &4480072532439346
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545041755460774}
+  m_GameObject: {fileID: 1106435766305948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,26 +40,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114651531670467724
+--- !u!114 &114578966555063296
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545041755460774}
+  m_GameObject: {fileID: 1106435766305948}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: Vous entendez un bruit en haut d'une maontagne
   dialogue:
-    name: Commandant Moutarde
+    name: "Vous-m\xEAme"
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - "Lors d'une temp\xEAte, vous entendez un bruit provenant d'une montage."
+    - "Intrigu\xE9, vous vous demandez quoi faire."
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
+  - text: "Partir l\xE0-bas"
+    physicalEffect: -1
+    mentalEffect: 3
+    populationEffect: 0
+    WholeVillage: 0
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 1508815744904578, guid: 84c6bc7157e414a41b255336ac17c0f3,
+        type: 2}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 1
+  - text: Ne pas partir
+    physicalEffect: 0
     mentalEffect: 0
     populationEffect: 0
     WholeVillage: 0
@@ -75,9 +93,10 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  - text: J'ai soif
-    physicalEffect: 0
-    mentalEffect: -10
+  deviantChoices:
+  - text: PasDeSignal
+    physicalEffect: -4
+    mentalEffect: -4
     populationEffect: 0
     WholeVillage: 0
     choiceConditions:
@@ -88,28 +107,11 @@ MonoBehaviour:
       PhysicalHealthUpperThreshold: 0
       PhysicalHealthLowerThreshold: 0
     childEvent:
-      childObject: {fileID: 0}
+      childObject: {fileID: 1106435766305948, guid: 62eafdb0399e42643b710a2170902700,
+        type: 2}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
-    populationEffect: -1
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
-  deviantChoices: []
+      childHappenNext: 1
   luck: 0.25
   weight: 5
   baseWeight: 5

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4009711735630638}
   - component: {fileID: 114651531670467724}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: Pilote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,33 +51,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: "Le pilote du vaisseau veut tenter de red\xE9marrer le vaisseau avec l'\xE9nergie
+    restant. Il vous demande votre avis."
   dialogue:
-    name: Commandant Moutarde
+    name: Le scientifique
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - "Le pilote veut essayer de red\xE9marrer avec l'\xE9nergie restant dans les
+      batteries."
+    - "Il dit se souvenir d'une manoeuvre qui pourrait permettre de nous \xE9chapper
+      de ce lieu ! Acceptez-vous sa demande ?"
+    - Compris Monsieur.
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
-    mentalEffect: 0
-    populationEffect: 0
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
-  - text: J'ai soif
+  - text: Accepter
     physicalEffect: 0
-    mentalEffect: -10
+    mentalEffect: 10
+    populationEffect: 0
+    WholeVillage: 0
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 1545041755460774, guid: e619b05b40cf86a4d91da62f7e5cc4fe,
+        type: 2}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 1
+  - text: Refuser
+    physicalEffect: -2
+    mentalEffect: -2
     populationEffect: 0
     WholeVillage: 0
     choiceConditions:
@@ -92,10 +97,11 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
-    populationEffect: -1
+  deviantChoices:
+  - text: PasExplosion
+    physicalEffect: 0
+    mentalEffect: 1
+    populationEffect: 0
     WholeVillage: 0
     choiceConditions:
       AuthorityUpperThreshold: 0
@@ -109,7 +115,6 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  deviantChoices: []
   luck: 0.25
   weight: 5
   baseWeight: 5
