@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4009711735630638}
   - component: {fileID: 114651531670467724}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: "D\xE9couverteCristaux"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,35 +51,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: "Notre exp\xE9dition a \xE9t\xE9 fructueuse, nous avons ramen\xE9 des cristaux
+    \xE9carlate. Elles renferment certainement un \xE9nergie puissante. Que devons
+    nous en faire ?"
   dialogue:
-    name: Commandant Moutarde
+    name: L'explorateur
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - "Notre exp\xE9dition a \xE9t\xE9 fructueuse, nous avons ramen\xE9 des cristaux
+      \xE9carlates. Elles renferment certainement un \xE9nergie puissante."
+    - Que devons nous en faire ?
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
-    mentalEffect: 0
-    populationEffect: 0
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
-  - text: J'ai soif
+  - text: Je les garde pour moi !
     physicalEffect: 0
     mentalEffect: -10
     populationEffect: 0
-    WholeVillage: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
@@ -92,11 +78,11 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
-    populationEffect: -1
-    WholeVillage: 0
+  - text: Etudier les cristaux
+    physicalEffect: 5
+    mentalEffect: 1
+    populationEffect: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0

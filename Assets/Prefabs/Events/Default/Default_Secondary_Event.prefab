@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114651531670467724}
   m_Layer: 0
   m_Name: Default_Secondary_Event
-  m_TagString: Event
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
       childHappenNext: 0
   deviantChoices: []
   luck: 0.25
-  weight: 1
+  weight: 1000
   baseWeight: 5
   happenOnce: 0
   eventConditions:

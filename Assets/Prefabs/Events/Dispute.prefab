@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4009711735630638}
   - component: {fileID: 114651531670467724}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: Dispute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,16 +51,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: "La scientifique n'arr\xEAte pas de nous voler nos ressources pour ses recherches
+    ! Faite quelque chose !"
   dialogue:
-    name: Commandant Moutarde
+    name: "Le vieux s\xE9nateur"
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - "La chef du laboratoire n'arr\xEAte pas de voler nos ressources pour ses recherches
+      ! "
+    - "Elle promet que nous aurons bient\xF4t des r\xE9sultats, mais cela fait des
+      jours que l'on attend."
+    - Cela ne peut plus durer. Faites quelque chose !
+    - Bien Monsieur.
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
-    mentalEffect: 0
+  - text: Intervenir
+    physicalEffect: -1
+    mentalEffect: 4
     populationEffect: 0
     WholeVillage: 0
     choiceConditions:
@@ -75,9 +80,9 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  - text: J'ai soif
+  - text: Refuser d'aider
     physicalEffect: 0
-    mentalEffect: -10
+    mentalEffect: -4
     populationEffect: 0
     WholeVillage: 0
     choiceConditions:
@@ -92,11 +97,12 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
-    populationEffect: -1
-    WholeVillage: 0
+  deviantChoices:
+  - text: Envenime
+    physicalEffect: -3
+    mentalEffect: 1
+    populationEffect: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
@@ -105,12 +111,12 @@ MonoBehaviour:
       PhysicalHealthUpperThreshold: 0
       PhysicalHealthLowerThreshold: 0
     childEvent:
-      childObject: {fileID: 0}
+      childObject: {fileID: 1592304447325326, guid: 560a8bdb5bd829e4ba14239ab57c65c4,
+        type: 2}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
-  deviantChoices: []
-  luck: 0.25
+      childHappenNext: 1
+  luck: 0.5
   weight: 5
   baseWeight: 5
   happenOnce: 0

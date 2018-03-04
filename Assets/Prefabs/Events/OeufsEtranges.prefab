@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1545041755460774}
+  m_RootGameObject: {fileID: 1761734127273974}
   m_IsPrefabParent: 1
---- !u!1 &1545041755460774
+--- !u!1 &1761734127273974
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4009711735630638}
-  - component: {fileID: 114651531670467724}
+  - component: {fileID: 4269902373426682}
+  - component: {fileID: 114712533103329534}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: OeufsEtranges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4009711735630638
+--- !u!4 &4269902373426682
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545041755460774}
+  m_GameObject: {fileID: 1761734127273974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,46 +40,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114651531670467724
+--- !u!114 &114712533103329534
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545041755460774}
+  m_GameObject: {fileID: 1761734127273974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: "Les oeufs sont d\xE9licieux"
   dialogue:
-    name: Commandant Moutarde
+    name: L'explorateur
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - "Notre exp\xE9dition a \xE9t\xE9 fructueuse, nous avons ramen\xE9 des oeufs
+      d'un couleur unique dans la galaxie."
+    - "Peut \xEAtre donnent-ils des capacit\xE9s extraordinaires ? Qu'en pensez-vous
+      ?"
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
+  - text: Etudier les oeufs
+    physicalEffect: -5
+    mentalEffect: 10
+    populationEffect: 0
+    WholeVillage: 1
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 1545041755460774, guid: 9ca9468e79d93d247b1bb9920efab855,
+        type: 2}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 1
+  - text: Manger les oeufs
+    physicalEffect: 10
     mentalEffect: 0
     populationEffect: 0
-    WholeVillage: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
       MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
+      MentalHealthLowerThreshold: 40
       PhysicalHealthUpperThreshold: 0
       PhysicalHealthLowerThreshold: 0
     childEvent:
-      childObject: {fileID: 0}
+      childObject: {fileID: 1761734127273974, guid: 0df34f8df4154054a8d0a6a12e1cd1cc,
+        type: 2}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
-  - text: J'ai soif
+      childHappenNext: 1
+  - text: "D\xE9truire les oeufs"
     physicalEffect: 0
-    mentalEffect: -10
+    mentalEffect: -3
     populationEffect: 0
-    WholeVillage: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
@@ -91,12 +112,13 @@ MonoBehaviour:
       childObject: {fileID: 0}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
-    populationEffect: -1
-    WholeVillage: 0
+      childHappenNext: 1
+  deviantChoices:
+  - text: EtudierOeufs
+    physicalEffect: -5
+    mentalEffect: 10
+    populationEffect: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
@@ -105,11 +127,29 @@ MonoBehaviour:
       PhysicalHealthUpperThreshold: 0
       PhysicalHealthLowerThreshold: 0
     childEvent:
-      childObject: {fileID: 0}
+      childObject: {fileID: 1545041755460774, guid: 9ca9468e79d93d247b1bb9920efab855,
+        type: 2}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
-  deviantChoices: []
+      childHappenNext: 1
+  - text: Infection
+    physicalEffect: 0
+    mentalEffect: 0
+    populationEffect: 0
+    WholeVillage: 1
+    choiceConditions:
+      AuthorityUpperThreshold: 40
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 1545041755460774, guid: a8544921a51405240a77dde5ebcb3ba7,
+        type: 2}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 1
   luck: 0.25
   weight: 5
   baseWeight: 5
@@ -117,7 +157,7 @@ MonoBehaviour:
   eventConditions:
     AuthorityUpperThreshold: 0
     AuthorityLowerThreshold: 0
-    MentalHealthUpperThreshold: 0
-    MentalHealthLowerThreshold: 0
+    MentalHealthUpperThreshold: 100
+    MentalHealthLowerThreshold: 60
     PhysicalHealthUpperThreshold: 0
     PhysicalHealthLowerThreshold: 0

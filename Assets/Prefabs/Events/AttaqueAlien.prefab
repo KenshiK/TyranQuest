@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4009711735630638}
   - component: {fileID: 114651531670467724}
   m_Layer: 0
-  m_Name: Default_Event 1
+  m_Name: AttaqueAlien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,52 +51,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b963a7e4440adfc42a2bc2e04026b440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "On a un probl\xE8me"
+  text: Une horde d'aliens nous attaque ! nous risquons de perdre des vies !
   dialogue:
-    name: Commandant Moutarde
+    name: Commandant Standalone
     sentences:
-    - 'Je suis '
-    - Commandant Moutarde
+    - Une horde d'aliens nous attaque ! Nous risquons de perdre des vies !
+    - "Nous devons nous d\xE9fendre ! Mais comment ?"
   choices:
-  - text: J'ai faim
-    physicalEffect: -10
-    mentalEffect: 0
-    populationEffect: 0
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
-  - text: J'ai soif
-    physicalEffect: 0
-    mentalEffect: -10
-    populationEffect: 0
-    WholeVillage: 0
-    choiceConditions:
-      AuthorityUpperThreshold: 0
-      AuthorityLowerThreshold: 0
-      MentalHealthUpperThreshold: 0
-      MentalHealthLowerThreshold: 0
-      PhysicalHealthUpperThreshold: 0
-      PhysicalHealthLowerThreshold: 0
-    childEvent:
-      childObject: {fileID: 0}
-      childWeightChange: 0
-      childNextTurnReset: 0
-      childHappenNext: 0
-  - text: Les deux
-    physicalEffect: -10
-    mentalEffect: -10
+  - text: "Le groupe entier d\xE9fend le camp"
+    physicalEffect: -3
+    mentalEffect: 4
     populationEffect: -1
-    WholeVillage: 0
+    WholeVillage: 1
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 0}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 0
+  - text: "Les plus arm\xE9s d\xE9fendent le camp"
+    physicalEffect: 0
+    mentalEffect: 3
+    populationEffect: -1
+    WholeVillage: 1
+    choiceConditions:
+      AuthorityUpperThreshold: 0
+      AuthorityLowerThreshold: 0
+      MentalHealthUpperThreshold: 0
+      MentalHealthLowerThreshold: 0
+      PhysicalHealthUpperThreshold: 0
+      PhysicalHealthLowerThreshold: 0
+    childEvent:
+      childObject: {fileID: 0}
+      childWeightChange: 0
+      childNextTurnReset: 0
+      childHappenNext: 0
+  - text: Fuyons temporairement !
+    physicalEffect: -6
+    mentalEffect: -3
+    populationEffect: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
