@@ -105,7 +105,6 @@ public class Village : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -120,6 +119,7 @@ public class Village : MonoBehaviour
         score = 0;
 
         DeleteChoiceHUD();
+        
         StartCoroutine(dayAnnouncer.DisplayDay());
         //dialogueManager = DialogueManager.GetInstance();
         eventPanel.SetActive(true);
@@ -136,6 +136,21 @@ public class Village : MonoBehaviour
         visualAuth.fillAmount = currentAuth / 100;
     }
 
+    private void CheckGameOver()
+    {
+        if(authority == 0)
+        {
+            dayAnnouncer.gameStatus = Enum_GameOver.lowAuthority;
+        }
+        if(authority == 100)
+        {
+            dayAnnouncer.gameStatus = Enum_GameOver.highAuthority;
+        }
+        if(survivorManager.Survivors.Count == 0)
+        {
+            dayAnnouncer.gameStatus = Enum_GameOver.death;
+        }
+    }
     public void ChangePopulation(int change)
     {
         if (change < 0)
@@ -171,11 +186,7 @@ public class Village : MonoBehaviour
     {
         score += survivorManager.Survivors.Count * daysSurvived;
     }
-
-    public void DisplayDay()
-    {
-
-    }
+    
 
     public void UpdateVillage(Choice c)
     {
@@ -195,6 +206,7 @@ public class Village : MonoBehaviour
         ChangePopulation(currentChoice.PopulationEffect);
         survivorManager.CheckSurvivorsHealth();
         UpdateAuthority();
+        CheckGameOver();
         ChooseEvent();
     }
 

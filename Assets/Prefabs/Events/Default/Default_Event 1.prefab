@@ -59,9 +59,9 @@ MonoBehaviour:
     - Commandant Moutarde
   choices:
   - text: J'ai faim
-    physicalEffect: -10
+    physicalEffect: -100
     mentalEffect: 0
-    populationEffect: 0
+    populationEffect: -10
     WholeVillage: 0
     choiceConditions:
       AuthorityUpperThreshold: 0
