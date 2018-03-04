@@ -11,6 +11,7 @@ public class TenteController : MonoBehaviour {
     int prevPop = 0;
 
     public GameObject explosion;
+    public AudioSource exploSound;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,10 @@ public class TenteController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         int actualPop = survivorManager.Survivors.Count;
+        if(actualPop < prevPop)
+        {
+            StartCoroutine(MakeSoundExplosion());
+        }
 
         if(actualPop != prevPop)
         {
@@ -56,5 +61,11 @@ public class TenteController : MonoBehaviour {
         yield return new WaitForSeconds(5);
         GameObject tent = Instantiate(explosion, null);
         tent.GetComponent<Transform>().position = t.position;
+    }
+
+    IEnumerator MakeSoundExplosion()
+    {
+        yield return new WaitForSeconds(5);
+        exploSound.Play();
     }
 }
