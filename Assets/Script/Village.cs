@@ -132,7 +132,7 @@ public class Village : MonoBehaviour
     {
         tempPop = survivorManager.Survivors.Count;
 
-        authText.text = "Authority :" + CurrentAuth;
+        authText.text = "Authority :" + authority;
         visualAuth.fillAmount = currentAuth / 100;
     }
 

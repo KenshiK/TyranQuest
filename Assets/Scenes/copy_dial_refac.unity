@@ -11886,6 +11886,7 @@ GameObject:
   - component: {fileID: 1137215727}
   - component: {fileID: 1137215726}
   - component: {fileID: 1137215725}
+  - component: {fileID: 1137215729}
   m_Layer: 5
   m_Name: ImageContainer
   m_TagString: Untagged
@@ -11993,6 +11994,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1137215723}
+--- !u!114 &1137215729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137215723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4388adadc0b614c4db87c33d6de1d3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1741034167411886, guid: 0d24f75ee014be346972ac5cee29eb3c, type: 2}
 --- !u!1 &1195730025
 GameObject:
   m_ObjectHideFlags: 0
@@ -13167,6 +13180,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114664260020101914, guid: b0857771b8d939a4fa2b6496eb991138,
+        type: 2}
+      propertyPath: possibleSecondaryEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4936762949194292, guid: b0857771b8d939a4fa2b6496eb991138, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13244,6 +13262,12 @@ Prefab:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 108126146}
+    - target: {fileID: 114664260020101914, guid: b0857771b8d939a4fa2b6496eb991138,
+        type: 2}
+      propertyPath: possibleSecondaryEvents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1106435766305948, guid: 906507ddc8ae9c949a2ecd4604e7fbf9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0857771b8d939a4fa2b6496eb991138, type: 2}
   m_IsPrefabParent: 0
