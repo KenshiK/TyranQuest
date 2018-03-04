@@ -68,7 +68,7 @@ MonoBehaviour:
     populationEffect: 0
     WholeVillage: 1
     choiceConditions:
-      AuthorityUpperThreshold: 70
+      AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
       MentalHealthUpperThreshold: 0
       MentalHealthLowerThreshold: 0

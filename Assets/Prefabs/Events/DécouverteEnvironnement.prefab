@@ -83,7 +83,7 @@ MonoBehaviour:
     populationEffect: 0
     WholeVillage: 1
     choiceConditions:
-      AuthorityUpperThreshold: 0
+      AuthorityUpperThreshold: 100
       AuthorityLowerThreshold: 30
       MentalHealthUpperThreshold: 0
       MentalHealthLowerThreshold: 0
@@ -94,12 +94,11 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
-  deviantChoices:
   - text: Refuser
-    physicalEffect: -3
-    mentalEffect: 3
-    populationEffect: -2
-    WholeVillage: 0
+    physicalEffect: 0
+    mentalEffect: -5
+    populationEffect: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 30
       AuthorityLowerThreshold: 0
@@ -113,6 +112,7 @@ MonoBehaviour:
       childWeightChange: 0
       childNextTurnReset: 0
       childHappenNext: 0
+  deviantChoices: []
   luck: 0.25
   weight: 5
   baseWeight: 4
