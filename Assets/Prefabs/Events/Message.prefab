@@ -81,8 +81,8 @@ MonoBehaviour:
   deviantChoices: []
   luck: 0.25
   weight: 5
-  baseWeight: 5
-  happenOnce: 0
+  baseWeight: 0
+  happenOnce: 1
   eventConditions:
     AuthorityUpperThreshold: 0
     AuthorityLowerThreshold: 0
