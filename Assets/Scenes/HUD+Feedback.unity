@@ -13363,6 +13363,7 @@ GameObject:
   - component: {fileID: 1179054918}
   - component: {fileID: 1179054917}
   - component: {fileID: 1179054920}
+  - component: {fileID: 1179054921}
   m_Layer: 5
   m_Name: Default_Choice (1)
   m_TagString: Choice
@@ -13508,6 +13509,19 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &1179054921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1179054915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &1188888911
 GameObject:
   m_ObjectHideFlags: 0
@@ -15839,6 +15853,7 @@ GameObject:
   - component: {fileID: 1984894662}
   - component: {fileID: 1984894661}
   - component: {fileID: 1984894664}
+  - component: {fileID: 1984894665}
   m_Layer: 5
   m_Name: Default_Choice (2)
   m_TagString: Choice
@@ -15984,6 +15999,19 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &1984894665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984894659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &2009028555
 GameObject:
   m_ObjectHideFlags: 0
@@ -16162,6 +16190,7 @@ GameObject:
   - component: {fileID: 2060850393}
   - component: {fileID: 2060850392}
   - component: {fileID: 2060850395}
+  - component: {fileID: 2060850396}
   m_Layer: 5
   m_Name: Default_Choice
   m_TagString: Choice
@@ -16307,6 +16336,19 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &2060850396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060850390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1001 &2077638767
 Prefab:
   m_ObjectHideFlags: 0
