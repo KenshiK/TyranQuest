@@ -2,8 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ClickToLoadAsync : MonoBehaviour
-{
+public class ClickToLoadAsync : MonoBehaviour {
 
     public Slider loadingBar;
     public GameObject loadingImage;
@@ -19,7 +18,7 @@ public class ClickToLoadAsync : MonoBehaviour
     }
 
 
-    IEnumerator LoadLevelWithBar(int level)
+    IEnumerator LoadLevelWithBar (int level)
     {
         async = Application.LoadLevelAsync(level);
         while (!async.isDone)
