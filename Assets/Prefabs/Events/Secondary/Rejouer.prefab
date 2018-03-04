@@ -58,11 +58,10 @@ MonoBehaviour:
     - "On dirais que vous avez perdue. Vous \xEAtes encore moins bon que je le pensais."
     - "Nous pouvons toujours refaire une partie. Je suis s\xFBr que vous gagnerez
       ce coup-ci"
-    - Alors ?
   choices:
   - text: Rejouer
-    physicalEffect: 0
-    mentalEffect: 0
+    physicalEffect: -1
+    mentalEffect: -1
     populationEffect: 0
     WholeVillage: 0
     choiceConditions:

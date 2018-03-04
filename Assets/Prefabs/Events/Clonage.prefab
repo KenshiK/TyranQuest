@@ -60,7 +60,6 @@ MonoBehaviour:
       miracles du 35\xE8me si\xE8cle !"
     - Nous pouvons maintenant cloner des humains ! Il serait sage de profiter de cette
       technologie.
-    - Quel est votre opinion sur ce sujet ?
   choices:
   - text: C'est immoral !
     physicalEffect: 0
