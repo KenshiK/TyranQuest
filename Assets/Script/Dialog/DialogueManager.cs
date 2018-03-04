@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour {
     public Text titleText;
     public Button continueButton;
     public GameObject eventHUD;
+    public AudioSource TypingSound;
 
     protected static DialogueManager instance;
     protected bool isRunning = false;
@@ -96,6 +97,7 @@ public class DialogueManager : MonoBehaviour {
 	{
         isRunning = true;
         dialogueText.text = "";
+        TypingSound.Play();
         if (sentence != null)
         {
             foreach (char letter in sentence.ToCharArray())
@@ -104,6 +106,7 @@ public class DialogueManager : MonoBehaviour {
                 yield return null;
             }
         }
+        TypingSound.Stop();
         isRunning = false;
         /*
         if (isRunning == false)
