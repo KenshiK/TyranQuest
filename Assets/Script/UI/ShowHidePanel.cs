@@ -26,4 +26,9 @@ public class ShowHidePanel : MonoBehaviour {
         }
 
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

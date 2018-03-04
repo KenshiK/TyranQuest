@@ -55,12 +55,16 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - "La terre est devenue hostile pour les humains. .\r\n\n\n"
+    - 'La terre est devenue hostile pour les humains.
+
+
+
+'
     - "Un groupe d\u2019humains a embarqu\xE9 dans un vaisseau en qu\xEAte d\u2019une
       nouvelle plan\xE8te pour vivre...\r"
-    - "Le groupe arrive in extremis sur une plan\xE8te"
+    - "Le groupe arrive in extremis sur une plan\xE8te."
     - "Vous \xEAtes le chef du groupe et devez assurer sa survie en donnant un certain
-      nombre d\u2019ordres dans un environnement nouveau et dangereux\r"
+      nombre d\u2019ordres dans un environnement nouveau et dangereux\r."
   choices:
   - text: Commencer la colonisation
     physicalEffect: 0

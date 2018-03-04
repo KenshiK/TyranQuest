@@ -135,7 +135,7 @@ MonoBehaviour:
       childNextTurnReset: 0
       childHappenNext: 0
   luck: 0.25
-  weight: 5
+  weight: 0
   baseWeight: 0
   happenOnce: 1
   eventConditions:

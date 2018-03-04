@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: c2bcc414e91a75046abd86b244c994a7
   - enabled: 1
-    path: Assets/Scenes/HUD+Feedback.unity
-    guid: 82fe306ed2151d548ad9e8e52a7c09f2
+    path: Assets/Scenes/copy_dial_refac.unity
+    guid: 72b0d062f66756841a91616ef48e373e
