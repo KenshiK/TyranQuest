@@ -45,6 +45,13 @@ public class Village : MonoBehaviour
     private int tempPop;
     private int score;
 
+    public RectTransform authTransform;
+    private float currentAuth;
+
+    public int maxAuth;
+    public Text authText;
+    public Image visualAuth;
+
     public static Village GetInstance()
     {
         if (instance == null)
@@ -117,12 +124,17 @@ public class Village : MonoBehaviour
         StartCoroutine(dayAnnouncer.DisplayDay());
         //dialogueManager = DialogueManager.GetInstance();
         eventPanel.SetActive(true);
+
+        CurrentAuth = maxAuth;
     }
 
     // Update is called once per frame
     void Update()
     {
         tempPop = survivorManager.Survivors.Count;
+
+        authText.text = "Authority :" + CurrentAuth;
+        visualAuth.fillAmount = currentAuth / 100;
     }
 
     public void ChangePopulation(int change)
@@ -185,6 +197,19 @@ public class Village : MonoBehaviour
         survivorManager.CheckSurvivorsHealth();
         UpdateAuthority();
         ChooseEvent();
+    }
+
+    private float CurrentAuth
+    {
+        get
+        {
+            return currentAuth;
+        }
+
+        set
+        {
+            currentAuth = Authority;
+        }
     }
 
     public int Score
