@@ -48,7 +48,6 @@ public class SurvivorManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {

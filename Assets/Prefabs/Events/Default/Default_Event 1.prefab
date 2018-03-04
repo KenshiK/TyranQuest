@@ -61,7 +61,7 @@ MonoBehaviour:
   - text: J'ai faim
     physicalEffect: -100
     mentalEffect: 0
-    populationEffect: 0
+    populationEffect: -10
     WholeVillage: 0
     choiceConditions:
       AuthorityUpperThreshold: 0

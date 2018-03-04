@@ -58,7 +58,12 @@ public class DayAnnouncer : MonoBehaviour {
         gameOverCause.enabled = false;
         gameOverDisplay.enabled = false;
         buttons = GetComponentsInChildren<Button>();
-	}
+        foreach (Button b in buttons)
+        {
+            b.GetComponentInChildren<Text>().enabled = false;
+            b.enabled = false;
+        }
+    }
 
     // Update is called once per frame
     private void Update()
@@ -117,9 +122,7 @@ public class DayAnnouncer : MonoBehaviour {
         dayDisplay.enabled = true;
         scoreDisplay.enabled = true;
         yield return new WaitForSecondsRealtime(displayDuration);
-
         
-
         if (gameStatus == Enum_GameOver.playing)
         {
             if (village.CurrentChoice != null)
@@ -180,7 +183,8 @@ public class DayAnnouncer : MonoBehaviour {
     {
         foreach(Button b in buttons)
         {
-            b.gameObject.SetActive(true);
+            b.enabled = true;
+            b.GetComponentInChildren<Text>().enabled = true;
         }
         canvas.sortingOrder = 3;
         canvasGroup.alpha = 1.0f;
@@ -192,4 +196,12 @@ public class DayAnnouncer : MonoBehaviour {
         gameOverCause.enabled = true;
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    public void Reload()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }
