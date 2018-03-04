@@ -9,6 +9,7 @@ public class Event : MonoBehaviour {
     public string text;
     public Dialogue dialogue;
     public Choice[] choices;
+    
 
     [Header("Deviant behavior Settings")]
     public Choice[] deviantChoices;
@@ -21,10 +22,15 @@ public class Event : MonoBehaviour {
     public Condition eventConditions;
     public int Weight { get { return weight; } set { weight = Mathf.Max(0, value); } }
 
+    private Village village;
+
     // Use this for initialization
     void Start()
     {
-        DialogueManager.GetInstance().StartDialogue(dialogue);
+        village = Village.GetInstance();
+        village.dialogueManager.StartDialogue(dialogue);
+
+        //DialogueManager.GetInstance().StartDialogue(dialogue);
 
         /*
          * REFACT
@@ -48,7 +54,20 @@ public class Event : MonoBehaviour {
             else
                 c = choices[num];
 
-            village.UpdateVillage(c);
+            //village.HUDEvent.SetActive(false);
+
+            //village.UpdateVillage(c);
+
+            village.dialogueManager.SetChoix(c);
+
+            //Next line
+            village.dialogueManager.DisplayNextSentence();
+
+            //Button continue appear
+            village.dialogueManager.continueButton.gameObject.SetActive(true);
+
+            village.dialogueManager.eventHUD.SetActive(false);
+
         }
         else
         {

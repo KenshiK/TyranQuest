@@ -11,7 +11,7 @@ public class Village : MonoBehaviour
 
     public GameObject survivorsPanel;
     public GameObject eventPanel;
-    private bool eventIsActive = false;
+    private bool eventIsActive = true;
 
     private static Village instance = null;
     private SurvivorManager survivorManager = null;
@@ -19,7 +19,6 @@ public class Village : MonoBehaviour
     [SerializeField] private GameObject[] possibleEvents;
     [SerializeField] private GameObject[] possibleSecondaryEvents;
     [SerializeField] private GameObject HUD;
-
     public GameObject HUDEvent;
     public string physicalGainText;
     public string physicalLossText;
@@ -93,7 +92,7 @@ public class Village : MonoBehaviour
 
     GameObject newPanelSurvivor = null;
 
-    DialogueManager dialogueManager;
+    public DialogueManager dialogueManager;
 
     // Use this for initialization
     public void OnDrawGizmosSelected()
@@ -301,7 +300,10 @@ public class Village : MonoBehaviour
                 Currentbutton.GetComponent<Button>().onClick.RemoveAllListeners();
                 int temp = i;
                 Currentbutton.GetComponent<Button>().onClick.AddListener(delegate { currentEvent.GetComponent<Event>().ApplyChoice(temp); });
+
+                
             }
+            //dialogueManager.DisplayNextSentence();
         }
         /*
         GameObject Currentbutton;

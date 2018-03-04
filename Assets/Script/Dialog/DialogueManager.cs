@@ -11,9 +11,22 @@ public class DialogueManager : MonoBehaviour {
     public Button continueButton;
     public GameObject eventHUD;
 
+    public Image characterImage;
+    public Sprite scientist0; //Drag your first sprite here in inspector.
+    public Sprite senator0; //Drag your second sprite here in inspector.
+    public Sprite warrior0; //Drag your first sprite here in inspector.
+    public Sprite explorer0; //Drag your second sprite here in inspector.
+
+    private Choice choix;
+
     protected static DialogueManager instance;
     protected bool isRunning = false;
     private Queue<string> sentences;
+
+    public void SetChoix(Choice c)
+    {
+        choix = c;
+    }
 
     public static DialogueManager GetInstance()
     {
@@ -51,6 +64,31 @@ public class DialogueManager : MonoBehaviour {
         Debug.Log("Starting conversation with" + dialogue.name);
 
 		nameText.text = dialogue.name;
+
+        switch (nameText.text)
+        {
+            case "Chef du laboratoire":
+                characterImage.sprite = scientist0;
+                characterImage.color = new Color32(0xff, 0xff, 0xff, 0xff);
+                break;
+            case "L'explorateur":
+                characterImage.sprite = explorer0;
+                characterImage.color = new Color32(0xff, 0xff, 0xff, 0xff);
+                break;
+            case "Le vieux sénateur":
+                characterImage.sprite = senator0;
+                characterImage.color = new Color32(0xff, 0xff, 0xff, 0xff);
+                break;
+            case "Commandant Standalone":
+                characterImage.sprite = warrior0;
+                characterImage.color = new Color32(0xff, 0xff, 0xff, 0xff);
+                break;
+
+            default:
+                Debug.Log("Incorrect intelligence level.");
+                break;
+        }
+
         titleText.text = dialogue.name;
 
 		//sentences.Clear();
@@ -65,17 +103,16 @@ public class DialogueManager : MonoBehaviour {
 
 	public void DisplayNextSentence ()
 	{
-		if (sentences.Count > 1)
+		if (sentences.Count > 2)
 		{
             eventHUD.SetActive(false);
-            //timerIsActive = true;
             continueButton.gameObject.SetActive(true);
         }
 
-        if (sentences.Count == 1)
+        if (sentences.Count == 2)
         {
-            continueButton.gameObject.SetActive(false);
             eventHUD.SetActive(true);
+            continueButton.gameObject.SetActive(false);
         }
         
         
@@ -140,7 +177,8 @@ public class DialogueManager : MonoBehaviour {
 
 	void EndDialogue()
 	{
-
+        Village village = Village.GetInstance();
+        village.UpdateVillage(choix);
     }
 
     public void ValidateButton ()
