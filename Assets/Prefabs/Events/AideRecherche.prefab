@@ -54,7 +54,7 @@ MonoBehaviour:
   text: "La scientifique du camp demande de l'aide pour ses recherches. Elle pense
     pouvoir d\xE9velopper une nouvelle technologie !"
   dialogue:
-    name: Un scientifique
+    name: Scientifique
     sentences:
     - "La chef du laboratoire a une id\xE9e. Elle pense pouvoir d\xE9velopper une
       nouvelle technologie gr\xE2ce aux batteries du vaisseau. "

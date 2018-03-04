@@ -75,11 +75,11 @@ MonoBehaviour:
       PhysicalHealthUpperThreshold: 0
       PhysicalHealthLowerThreshold: 0
     childEvent:
-      childObject: {fileID: 1545041755460774, guid: a08a1e46f732db1429471cb92557a542,
+      childObject: {fileID: 1545041755460774, guid: 6f88847f7e0db5144b67faf56adc9f65,
         type: 2}
       childWeightChange: 0
       childNextTurnReset: 1
-      childHappenNext: 0
+      childHappenNext: 1
   - text: "Ce n'est pas une priorit\xE9 !"
     physicalEffect: -3
     mentalEffect: -5
@@ -115,7 +115,7 @@ MonoBehaviour:
         type: 2}
       childWeightChange: 0
       childNextTurnReset: 1
-      childHappenNext: 0
+      childHappenNext: 1
   luck: 0.5
   weight: 5
   baseWeight: 5

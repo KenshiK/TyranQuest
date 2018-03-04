@@ -95,13 +95,13 @@ MonoBehaviour:
       childHappenNext: 0
   deviantChoices: []
   luck: 0.25
-  weight: 5
-  baseWeight: 5
+  weight: 0
+  baseWeight: 0
   happenOnce: 0
   eventConditions:
     AuthorityUpperThreshold: 30
     AuthorityLowerThreshold: 0
-    MentalHealthUpperThreshold: 50
-    MentalHealthLowerThreshold: 20
-    PhysicalHealthUpperThreshold: 90
-    PhysicalHealthLowerThreshold: 70
+    MentalHealthUpperThreshold: 0
+    MentalHealthLowerThreshold: 0
+    PhysicalHealthUpperThreshold: 0
+    PhysicalHealthLowerThreshold: 0
