@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1717794583376184}
+  m_IsPrefabParent: 1
+--- !u!1 &1717794583376184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4936762949194292}
+  - component: {fileID: 114664260020101914}
+  - component: {fileID: 114115359917871322}
+  m_Layer: 0
+  m_Name: Village
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1813409950356592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4289468146435260}
+  - component: {fileID: 212462679521291586}
+  m_Layer: 0
+  m_Name: Home
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4289468146435260
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813409950356592}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4936762949194292}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4936762949194292
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717794583376184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4289468146435260}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114115359917871322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717794583376184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6df83eae8290c844a6ba0f1bd293e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  survivorCount: 3
+  nameList: {fileID: 4900000, guid: 4500bc1982a71e44bb433b4256ef0b68, type: 3}
+  lowerBound: 30
+  upperBound: 70
+  newMemberMentalImpact: 20
+  maxPopulation: 10
+--- !u!114 &114664260020101914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717794583376184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc24d51512aabd489f956b07e0f3a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  survivorsPanel: {fileID: 1989626241758538, guid: d7981e9b804de4947a3134abbce1441e,
+    type: 2}
+  eventPanel: {fileID: 0}
+  possibleEvents:
+  - {fileID: 1545041755460774, guid: ed1a72ff4db41d44588b78d4f15cf493, type: 2}
+  - {fileID: 1545041755460774, guid: 605b28c3f0fc2e24d916febb84a881db, type: 2}
+  - {fileID: 1545041755460774, guid: 0b89ff6772d53cc4b83ba1cde58cda6b, type: 2}
+  - {fileID: 1545041755460774, guid: c94d697a807fead4b90564bf2a912b3b, type: 2}
+  - {fileID: 1545041755460774, guid: 7946fe79a118da14ea79cc885f8f25ae, type: 2}
+  - {fileID: 1106435766305948, guid: 30e33f47c13ee5f40a726ae257822500, type: 2}
+  - {fileID: 1545041755460774, guid: cab93fce91e4d5c479efc4bcfb1ecea8, type: 2}
+  - {fileID: 1545041755460774, guid: 4b2d816042e0ff3499c00839d1e937f9, type: 2}
+  - {fileID: 1545041755460774, guid: 6e75a5ae8c8049446b225c636e8389a4, type: 2}
+  - {fileID: 1545041755460774, guid: f7d0f863618d6914dad34a792338b4be, type: 2}
+  - {fileID: 1545041755460774, guid: cb0f2877a87ac844c911d24b8d4b82ff, type: 2}
+  - {fileID: 1545041755460774, guid: 25a18fa73736eab439a881ae1425e732, type: 2}
+  - {fileID: 1545041755460774, guid: 644135b4a46096f4388b96233047695e, type: 2}
+  - {fileID: 1545041755460774, guid: a08a1e46f732db1429471cb92557a542, type: 2}
+  - {fileID: 1545041755460774, guid: 6f88847f7e0db5144b67faf56adc9f65, type: 2}
+  - {fileID: 1545041755460774, guid: ec93c6d251e8b09418648e64c1bb46e6, type: 2}
+  - {fileID: 1545041755460774, guid: e619b05b40cf86a4d91da62f7e5cc4fe, type: 2}
+  - {fileID: 1545041755460774, guid: c52215c884c0d03429f65280edaa8ecd, type: 2}
+  - {fileID: 1545041755460774, guid: 339eb6b5d752daf48ae07cfcd1e1ac0a, type: 2}
+  - {fileID: 1545041755460774, guid: a8544921a51405240a77dde5ebcb3ba7, type: 2}
+  - {fileID: 1545041755460774, guid: ee8ff3be26b09ae4bb3f8436cea04cdd, type: 2}
+  - {fileID: 1414683350084280, guid: 039b5bd6df0953b419640d56eba3c9b8, type: 2}
+  - {fileID: 1545041755460774, guid: ec0356cbce11426418de6ae5bb3a23f2, type: 2}
+  - {fileID: 1545041755460774, guid: 96c3acd05e518e64b8c59706ecb0701a, type: 2}
+  - {fileID: 1761734127273974, guid: 0df34f8df4154054a8d0a6a12e1cd1cc, type: 2}
+  - {fileID: 1545041755460774, guid: a4bfae017bb9e554194b627b48f578b8, type: 2}
+  - {fileID: 1545041755460774, guid: 9ca9468e79d93d247b1bb9920efab855, type: 2}
+  - {fileID: 1545041755460774, guid: a7fdabe1416d6904faf4fdc8591f54a8, type: 2}
+  - {fileID: 1545041755460774, guid: 58bfd13ed0c93a9448a8526da22e2eb4, type: 2}
+  - {fileID: 1545041755460774, guid: 1c567cb01e4ff824eb0f4159608cf6ca, type: 2}
+  - {fileID: 1545041755460774, guid: ffe80631d2b734c4e9c81dadf2e565b3, type: 2}
+  - {fileID: 1545041755460774, guid: 79c15c1688b3fe44faac24105e32f189, type: 2}
+  - {fileID: 1508815744904578, guid: 84c6bc7157e414a41b255336ac17c0f3, type: 2}
+  possibleSecondaryEvents:
+  - {fileID: 1545041755460774, guid: e56bb971e445ad744b1f56da81b28a7a, type: 2}
+  - {fileID: 1592304447325326, guid: 560a8bdb5bd829e4ba14239ab57c65c4, type: 2}
+  - {fileID: 1540799017107716, guid: fb567971f6c51c94cbcb102256a699aa, type: 2}
+  - {fileID: 1975013847691786, guid: ebd02d003cea39a47851bfe4cc154487, type: 2}
+  HUD: {fileID: 0}
+  HUDEvent: {fileID: 0}
+  physicalGainText: "Vous vous sentez repos\xE9"
+  physicalLossText: "Vous vous sentez fatigu\xE9"
+  mentalGainText: "Quel autorit\xE9 !"
+  mentalLossText: "Quel simplicit\xE9 !"
+  populationGainText: Du sang frais vous rejoins
+  populationlLossText: "Vous avez perdu une partie de l'\xE9quipe"
+  dayAnnouncer: {fileID: 0}
+--- !u!212 &212462679521291586
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813409950356592}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f23c21277b7292a48a1dd69772ed863e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4, y: 4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
