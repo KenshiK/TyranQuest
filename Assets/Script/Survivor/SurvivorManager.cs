@@ -39,7 +39,7 @@ public class SurvivorManager : MonoBehaviour {
     {
         get
         {
-            return (int)((1f / survivorCount) * 100f);
+            return (int)((1f / survivorCount) * -100f);
         }
     }
 
@@ -91,19 +91,25 @@ public class SurvivorManager : MonoBehaviour {
         {
             int numberAffected = Random.Range(1, survivors.Count); // affected survivors are chosen randomly
             List<int> temp = new List<int>();
-            for (int i = 0; i < numberAffected; i++)
+            int bound = numberAffected > survivors.Count ? survivors.Count : numberAffected;
+            for (int i = 0; i < bound; i++)
             {
-                int k = Random.Range(0, survivors.Count - 1);
+                
+                int k = Random.Range(0, survivors.Count);
                 if (!temp.Contains(k))
                 {
                     temp.Add(k);
                 }
-                else
+                else if(temp.Count < 1 && i == bound - 1)
+                {
                     i--;
+                }
+                    
             }
-            foreach(int i in temp)
+            foreach(int j in temp)
             {
-                survivors[i].ChangeResource(physical, mental);
+                survivors[j].ChangeResource(physical, mental);
+                
             }
         }
     }
@@ -111,7 +117,7 @@ public class SurvivorManager : MonoBehaviour {
     public void CheckSurvivorsHealth()
     {
         List<Survivor> temp = new List<Survivor>();
-        foreach(Survivor s in temp)
+        foreach(Survivor s in survivors)
         {
             if(s.MentalHealth < lowerBound)
             {
@@ -120,18 +126,25 @@ public class SurvivorManager : MonoBehaviour {
                 {
                     Survivor victim = survivors[Random.Range(0, survivors.Count)];
                     s.Assassinate(victim);
+                    temp.Add(victim);
                 }
             }
             if(s.PhysicalHealth == 0)
             {
-                temp.Add(s);
+                if (!temp.Contains(s))
+                {
+                    temp.Add(s);
+                }
             }
         }
-
-        for(int i = temp.Count-1; i>0; i--)
+        if (temp.Count > 0)
         {
-            KillSurvivor(temp[i]);
+            for (int i = temp.Count - 1; i >= 0; i--)
+            {
+                KillSurvivor(temp[i]);
+            }
         }
+        
     }
 
     public void UpdateOverallSatisfaction()
@@ -211,18 +224,19 @@ public class SurvivorManager : MonoBehaviour {
         }
         else
             sb.Append(s.FirstName).Append(" ").Append(s.LastName).Append(" died");
-
+        Debug.Log(sb.ToString());
         string writeToDialogue = sb.ToString();
         //DialogueManager.GetInstance().StartDialogue(new Dialogue(new string[] { writeToDialogue }));
 
         /*
          * REFACT 
          */
-        textWindowManager.GetInstance().AddToDico(2, writeToDialogue);
+        //textWindowManager.GetInstance().AddToDico(2, writeToDialogue);
 
         survivors.Remove(s);
-        foreach(Survivor remaining in survivors)
+        foreach (Survivor remaining in survivors)
         {
+
             remaining.ChangeMentalHealth(DeathMentalImpact);
         }
     }

@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Enum_GameOver
+{
+    playing,
+    lowAuthority,
+    highAuthority,
+    death
+}
 public enum Enum_DisplayStatus
 {
     hidden,
@@ -14,33 +21,69 @@ public enum Enum_DisplayStatus
 public class DayAnnouncer : MonoBehaviour {
 
     private Village village;
+    private SurvivorManager survivorManager;
     private CanvasGroup canvasGroup;
     private Canvas canvas;
+    private Button[] buttons;
     private Text[] TextDisplay;
     private Text dayDisplay;
     private Text scoreDisplay;
+    private Text gameOverDisplay;
+    private Text gameOverCause;
     private Image background;
     public float timeBeforeDisplay = 1.5f;
     public float displayDuration = 3.0f;
     public float fadeInDuration = 0.5f;
     public float fadeOutDuration = 4.0f;
-    
+    public Enum_GameOver gameStatus = Enum_GameOver.playing;
+
+    public string lowAuthorityString = "Vous avez été exilé par la colonie";
+    public string highAuthorityString = "Une rebellion a mis fin à votre règne de terreur";
+    public string deathString = "La colonisation a échoué";
+
     public Enum_DisplayStatus displayStatus = Enum_DisplayStatus.hidden;
-    private float displayTimer, fadeTimer;
 	// Use this for initialization
 	void Start () {
         village = Village.GetInstance();
+        survivorManager = SurvivorManager.GetInstance();
         TextDisplay = GetComponentsInChildren<Text>();
         dayDisplay = TextDisplay[0];
         scoreDisplay = TextDisplay[1];
+        gameOverDisplay = TextDisplay[2];
+        gameOverCause = TextDisplay[3];
         background = GetComponentInChildren<Image>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponent<Canvas>();
         dayDisplay.enabled = false;
+        gameOverCause.enabled = false;
+        gameOverDisplay.enabled = false;
+        buttons = GetComponentsInChildren<Button>();
 	}
-	
-	// Update is called once per frame
-	void LateUpdate () {
+
+    // Update is called once per frame
+    private void Update()
+    {
+        switch (gameStatus)
+        {
+            case Enum_GameOver.lowAuthority:
+                gameOverCause.text = lowAuthorityString;
+                break;
+            case Enum_GameOver.highAuthority:
+                gameOverCause.text = highAuthorityString;
+                break;
+            case Enum_GameOver.death:
+                gameOverCause.text = deathString;
+                break;
+            default:
+                break;
+        }
+        if(gameStatus != Enum_GameOver.playing)
+        {
+            StopAllCoroutines();
+            GameOver();
+        }
+    }
+    void LateUpdate () {
         UpdateText();
 	}
 
@@ -66,6 +109,7 @@ public class DayAnnouncer : MonoBehaviour {
 
         yield return new WaitForSecondsRealtime(timeBeforeDisplay);
         StartCoroutine("Day");
+        
     }
 
     private IEnumerator Day()
@@ -74,12 +118,22 @@ public class DayAnnouncer : MonoBehaviour {
         scoreDisplay.enabled = true;
         yield return new WaitForSecondsRealtime(displayDuration);
 
-        if (village.CurrentChoice != null)
-            StartCoroutine(village.VillageCoroutine());
-        else
-            village.ChooseEvent();
+        
 
-        StartCoroutine("FadeOut");
+        if (gameStatus == Enum_GameOver.playing)
+        {
+            if (village.CurrentChoice != null)
+                StartCoroutine(village.VillageCoroutine());
+            else
+                village.ChooseEvent();
+
+            StartCoroutine("FadeOut");
+        }
+        else
+        {
+            GameOver();
+        }
+        
         
     }
     
@@ -120,6 +174,22 @@ public class DayAnnouncer : MonoBehaviour {
     public IEnumerator DisplayDay()
     {
             yield return StartCoroutine("Background");
+    }
+
+    public void GameOver()
+    {
+        foreach(Button b in buttons)
+        {
+            b.gameObject.SetActive(true);
+        }
+        canvas.sortingOrder = 3;
+        canvasGroup.alpha = 1.0f;
+        System.Text.StringBuilder sb = new System.Text.StringBuilder("Score : ").Append(village.Score);
+        scoreDisplay.text = sb.ToString();
+        scoreDisplay.enabled = true;
+        dayDisplay.enabled = false;
+        gameOverDisplay.enabled = true;
+        gameOverCause.enabled = true;
     }
 
 }
