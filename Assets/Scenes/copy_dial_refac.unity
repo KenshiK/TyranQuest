@@ -12957,6 +12957,17 @@ Prefab:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 108126146}
+    - target: {fileID: 114664260020101914, guid: b0857771b8d939a4fa2b6496eb991138,
+        type: 2}
+      propertyPath: possibleEvents.Array.data[32]
+      value: 
+      objectReference: {fileID: 1545041755460774, guid: 79c15c1688b3fe44faac24105e32f189,
+        type: 2}
+    - target: {fileID: 114115359917871322, guid: b0857771b8d939a4fa2b6496eb991138,
+        type: 2}
+      propertyPath: survivorCount
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0857771b8d939a4fa2b6496eb991138, type: 2}
   m_IsPrefabParent: 0

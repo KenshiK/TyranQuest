@@ -65,7 +65,7 @@ MonoBehaviour:
   - text: Envoyez un groupe
     physicalEffect: -3
     mentalEffect: 10
-    populationEffect: -2
+    populationEffect: 0
     WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0

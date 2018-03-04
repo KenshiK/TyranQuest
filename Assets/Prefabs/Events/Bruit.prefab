@@ -74,7 +74,7 @@ MonoBehaviour:
       childObject: {fileID: 1508815744904578, guid: 84c6bc7157e414a41b255336ac17c0f3,
         type: 2}
       childWeightChange: 0
-      childNextTurnReset: 0
+      childNextTurnReset: 1
       childHappenNext: 1
   - text: Ne pas partir
     physicalEffect: 0
