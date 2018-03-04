@@ -25,7 +25,7 @@ public class Village : MonoBehaviour
     public string mentalGainText;
     public string mentalLossText;
     public string populationGainText;
-    public string populationlLossText;
+    public string populationLossText;
     [SerializeField] private DayAnnouncer dayAnnouncer;
     private Survivor[] survivors;
 
@@ -374,20 +374,21 @@ public class Village : MonoBehaviour
         if (currentChoice.PopulationEffect > 0)
         {
             //population.Append(gainText).Append(currentChoice.PopulationEffect).Append(" en population");
-            population.Append(physicalGainText);
+            population.Append(populationGainText);
             sb_list.Enqueue(population);
         }
         else if (currentChoice.PopulationEffect < 0)
         {
             //population.Append(lossText).Append(currentChoice.PopulationEffect).Append(" en population");
-            population.Append(physicalLossText);
+            population.Append(populationLossText);
             sb_list.Enqueue(population);
         }
 
         if (sb_list.Count > 0)
         {
             resultSentences = new string[sb_list.Count];
-            for (int l = 0; l < sb_list.Count; l++)
+            int v = sb_list.Count;
+            for(int l = 0; l < v; l++)
             {
                 resultSentences[l] = sb_list.Dequeue().ToString();
             }

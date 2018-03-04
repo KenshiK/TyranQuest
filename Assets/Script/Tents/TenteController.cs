@@ -58,14 +58,14 @@ public class TenteController : MonoBehaviour {
 
     IEnumerator MakeExplosion(Transform t)
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         GameObject tent = Instantiate(explosion, null);
         tent.GetComponent<Transform>().position = t.position;
     }
 
     IEnumerator MakeSoundExplosion()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         exploSound.Play();
     }
 }
