@@ -46,6 +46,10 @@ public class DayAnnouncer : MonoBehaviour {
 
     private IEnumerator Background()
     {
+        if(canvas == null)
+        {
+            Debug.Log("undefined");
+        }
         canvas.sortingOrder = 3;
         canvasGroup.alpha = 1.0f;
         

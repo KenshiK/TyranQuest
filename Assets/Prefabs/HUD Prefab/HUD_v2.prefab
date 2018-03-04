@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 114972154390287804}
   - component: {fileID: 114920098671598694}
   m_Layer: 5
-  m_Name: HUD (1)
+  m_Name: HUD_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1545,12 +1545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 114976951850664500}
   dialogueText: {fileID: 114296162308572514}
+  titleText: {fileID: 0}
   continueButton: {fileID: 114019124954504896}
-  dialogueIsRunning: 0
   eventHUD: {fileID: 1149050758623450}
-  timerBar: {fileID: 114280987395471990}
-  maxTime: 5
-  timesUpText: {fileID: 1628930122285824}
 --- !u!114 &114920098671598694
 MonoBehaviour:
   m_ObjectHideFlags: 1
