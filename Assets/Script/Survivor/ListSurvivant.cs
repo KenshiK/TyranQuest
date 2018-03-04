@@ -15,7 +15,16 @@ public class ListSurvivant : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+        Launcher();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+    public void Launcher()
+    {
         survivors = SurvivorManager.GetInstance().Survivors;
         mentalChangement = SurvivorManager.GetInstance().MentalIncreaser;
         physicChangement = SurvivorManager.GetInstance().PhysicIncreaser;
@@ -103,9 +112,4 @@ public class ListSurvivant : MonoBehaviour {
             }
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

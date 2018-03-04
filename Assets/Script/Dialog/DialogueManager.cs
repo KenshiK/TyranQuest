@@ -104,13 +104,13 @@ public class DialogueManager : MonoBehaviour {
 
 	public void DisplayNextSentence ()
 	{
-		if (sentences.Count > 2)
+		if (sentences.Count > 1)
 		{
             eventHUD.SetActive(false);
             continueButton.gameObject.SetActive(true);
         }
 
-        if (sentences.Count == 2)
+        if (sentences.Count == 1)
         {
             eventHUD.SetActive(true);
             continueButton.gameObject.SetActive(false);

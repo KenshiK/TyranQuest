@@ -85,6 +85,8 @@ public class DayAnnouncer : MonoBehaviour {
     
     private IEnumerator FadeOut()
     {
+        village.ShowSurvivors();
+        village.ShowSurvivors();
         while (canvasGroup.alpha > 0)
         {
             canvasGroup.alpha -= 1 / fadeOutDuration * Time.unscaledDeltaTime;
