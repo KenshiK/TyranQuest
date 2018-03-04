@@ -117,7 +117,7 @@ MonoBehaviour:
       childHappenNext: 1
   deviantChoices: []
   luck: 0.25
-  weight: 5
+  weight: 0
   baseWeight: 0
   happenOnce: 0
   eventConditions:

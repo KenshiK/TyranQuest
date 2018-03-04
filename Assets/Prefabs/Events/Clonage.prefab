@@ -83,7 +83,7 @@ MonoBehaviour:
     physicalEffect: 0
     mentalEffect: 0
     populationEffect: 1
-    WholeVillage: 0
+    WholeVillage: 1
     choiceConditions:
       AuthorityUpperThreshold: 0
       AuthorityLowerThreshold: 0
