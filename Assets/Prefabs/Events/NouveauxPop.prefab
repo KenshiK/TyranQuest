@@ -59,7 +59,6 @@ MonoBehaviour:
     - "Deux hommes cochons sont arriv\xE9s ce matin \xE0 notre camp. Il souhaite int\xE9grer
       notre groupe."
     - Devons-nous les accepter ?
-    - "Tr\xE8s bien Monsieur."
   choices:
   - text: Accepter
     physicalEffect: 0

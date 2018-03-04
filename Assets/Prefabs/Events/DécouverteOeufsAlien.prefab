@@ -58,7 +58,6 @@ MonoBehaviour:
     sentences:
     - "C'est terrible ! nous avons d\xE9couvert un nid d'aliens sous notre camp."
     - "Les Oeufs risquent d'\xE9clorent \xE0 tout moment, que devons nous faire ?"
-    - Bien Monsieur.
   choices:
   - text: "D\xE9truire le nid"
     physicalEffect: -2

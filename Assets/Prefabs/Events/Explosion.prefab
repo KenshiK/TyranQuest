@@ -54,8 +54,11 @@ MonoBehaviour:
   text: "Le pilote a fait explos\xE9 une partie du vaisseau avec lui ! Un incendie
     s'est d\xE9clar\xE9"
   dialogue:
-    name: 
-    sentences: []
+    name: "Le vieux s\xE9nateur"
+    sentences:
+    - "Vous n'auriez pas d\xFB laissez le pilote seule dans le vaisseau. Il a d\xE9clar\xE9
+      un incendie dans la machineria avant de se jeter dans les flammes."
+    - "Nous devons \xE9teindre l'incendie pour limiter les d\xE9g\xE2ts !"
   choices:
   - text: "Arr\xEAter l'incendie"
     physicalEffect: -3

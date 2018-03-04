@@ -58,9 +58,8 @@ MonoBehaviour:
     - "Les oeufs \xE9taient d\xE9licieux, je n'avais jamais mang\xE9 d'omelette aussi
       bonne."
     - "Quelle id\xE9e g\xE9nial vous avez eu."
-    - Au revoir Monsieur.
   choices:
-  - text: Aquiscer
+  - text: Aquiescer
     physicalEffect: 0
     mentalEffect: 0
     populationEffect: 0

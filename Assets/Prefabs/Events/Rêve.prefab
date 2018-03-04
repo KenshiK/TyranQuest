@@ -78,7 +78,7 @@ MonoBehaviour:
         type: 2}
       childWeightChange: 0
       childNextTurnReset: 0
-      childHappenNext: 0
+      childHappenNext: 1
   - text: "Se contr\xF4ler"
     physicalEffect: 0
     mentalEffect: 0

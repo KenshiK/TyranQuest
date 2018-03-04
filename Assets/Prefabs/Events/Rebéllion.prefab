@@ -58,7 +58,6 @@ MonoBehaviour:
     sentences:
     - Certains survivants ne vous supportent plus. Ils souhaitent prendre votre place.
     - Il risque de vous tuer !
-    - Bien Monsieur
   choices:
   - text: "Mater la r\xE9bellion"
     physicalEffect: -1

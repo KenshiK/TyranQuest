@@ -59,7 +59,6 @@ MonoBehaviour:
     - "Une chaleur extr\xE8me ass\xE8che le sol. Il est impossible de travailler sous
       cette chaleur."
     - Nous ne pouvons plus tenir ! Laissez nous nous reposer !
-    - "Nous comprennons votre d\xE9cision."
   choices:
   - text: Ignorer la demande
     physicalEffect: -2

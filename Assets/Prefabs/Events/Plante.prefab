@@ -59,7 +59,6 @@ MonoBehaviour:
       !"
     - "Nous n'avons pas suffisamment de bonbonne d'oxyg\xE8ne pour tout le camp."
     - Quels sont vos ordres ?
-    - C'est entendu.
   choices:
   - text: Sauvez le plus de vies !
     physicalEffect: 0
